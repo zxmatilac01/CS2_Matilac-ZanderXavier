@@ -1,8 +1,31 @@
 # Electricity Bill Calculator
 RATE = 12.90
-name = input("Enter customer name: ")
-previous = float(input("Enter previous meter reading: "))
-current = float(input("Enter current meter reading: "))
+
+#Validation of User's Name
+while True:
+    name = input("Enter customer name: ")
+    if name == "":
+        print("Invalid Name. Please try again.")
+    else:
+        break
+
+#Validation of previous meter reading
+while True:
+    previous = float(input("Enter previous meter reading: "))
+    
+    if previous < 0:
+        print("Invalid previous meter reading. Must be no less than 0.")
+    else: 
+        break
+
+#Validation of current meter reading
+while True:
+    current = float(input("Enter current meter reading: "))
+    
+    if current < previous:
+        print("Invalid current meter reading. Must be no less than previous meter reading.")
+    else:
+        break
 
 consumption = current - previous
 total_bill = consumption * RATE
