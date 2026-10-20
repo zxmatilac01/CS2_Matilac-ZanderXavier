@@ -1,4 +1,4 @@
-# Electrcity Calculator
+# Electrcity Bill Calculator
 
 ## Description 
 
